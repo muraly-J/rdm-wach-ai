@@ -19,15 +19,13 @@ Brief, factual description of what changed and why.
 
 ## 📂 Scope
 
-(Check all that apply)
-
-- [ ] Data extraction
-- [ ] Data cleaning / resampling
-- [ ] Dataset export
-- [ ] Model training
-- [ ] InfluxDB write-back
-- [ ] Residual / alert logic
-- [ ] Documentation
+- Data extraction
+- Data cleaning / resampling
+- Dataset export
+- Model training
+- InfluxDB write-back
+- Residual / alert logic
+- Documentation
 
 ---
 
@@ -56,12 +54,10 @@ If none, write **“None”**.
 
 ## 🧪 How was this tested?
 
-(Check all that apply and describe briefly)
-
-- [ ] Local run
-- [ ] Sample AHU
-- [ ] Visual inspection
-- [ ] Metrics check
+- Local run
+- Sample AHU
+- Visual inspection
+  Metrics check
 
 **Details:**
 - Dataset size tested:
@@ -90,6 +86,3 @@ List files or outputs created or modified by this PR.
 - Does not tune model hyperparameters
 - Does not change InfluxDB schema
 - Does not affect alert thresholds
-
-- [ ] Yes
-- [ ] Needs clarification
