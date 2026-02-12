@@ -1,0 +1,172 @@
+Level,Department Name,Area Name,AHU Label,Location,Type,device_id,Remark,Class
+L08,1st Class Ward,1st Class Ward,AHU-L8-CW-01,AHU Room,1,e0802,,1CW T1
+L08,1st Class Ward,1st Class Ward,AHU-L8-CW-02,AHU Room,3,e0801,,1CW T3
+L05,Anaesthesiology Department,Anaesthesiology Department,AHU-L5-AD-01,AHU Room,1,e0503,,AD T1
+L05,Adult High Dependency Unit (DWA) ,Adult High Dependency Unit (DWA),AHU-L5-AHDU-01,AHU Room,3,e0506,,AHDU T3
+L05,Adult Intensive Care Unit,Adult Intensive Care Unit (AICU),AHU-L5-AICU-02,AHU Room,3,e0505,,AICU T3
+L05,Adult Intensive Care Unit,Adult Intensive Care Unit (AICU),AHU-L5-AICU-01,AHU Room,3,e0507,,AICU T3
+L02,Admission Revenue,Admission Revenue,AHU-L2-AR-01,AHU Room,1,e0209,,AR T1
+L02,ART Centre,ART Centre (O&G),AHU-L2-AC-01,AHU Room,1,,cant find any L2-AC,ART T1
+L02,ART Centre,ART Centre (O&G),AHU-L2-AC-02,AHU Room,1,,cant find any L2-AC,ART T1
+L02,ART Centre,ART Centre (O&G),AHU-L2-AC-03,AHU Room,14,,cant find any L2-AC,ART T14
+L02,ART Centre,ART Centre (O&G),AHU-L2-AC-04,AHU Room,16,,cant find any L2-AC,ART T16
+L06,Administration Unit,Administration Unit,AHU-L6-AU-01,AHU Room,3,e0603,,AU T1
+L06,Administration Unit,Administration Unit,AHU-L6-AU-02,AHU Room,3,e0604,,AU T2
+L03,Biophysiological Department,Biophysiological Department,AHU-L3-BL-01,AHU Room,1,e0423,,BD T1
+L01,Biomedical Engineering Services Unit,Biomedical Engineering Services Unit,AHU-L1-BES-01,AHU Room,1,e0102,,BESU T1
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-03,AHU Room,13,e0408,,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-01,AHU Room,13,e0409,,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-02,AHU Room,13,e0411,,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-16,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-06,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-15,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-14,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-05,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-12,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-13,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-11,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-10,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-09,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-08,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-07,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-04,AHU Room,13,,can find some L4-SCT but not this number,BMTU T13
+L04,Bone Marrow Transplant Unit (Stem Cell Transplant),Bone Marrow Transplant Unit (Stem Cell Transplant),AHU-L4-SCT-01,AHU Room,13,,duplicate: e0409,BMTU T13
+L02,Cafeteria,Cafeteria,AHU-L2-CF-01,AHU Room,1,e0206,,C T1
+L01,Catering & Dietitics Department,Catering - Dietitics Department 1 - Main Kitchen,AHU-L1-CA-02,AHU Room,1,e0105,,C&DD T1
+L01,Catering & Dietitics Department,Catering - Dietitics Department 1 - Main Kitchen,AHU-L1-CA-01,AHU Room,1,e0106,,C&DD T1
+L02,Child Development Centre,Child Development Centre 2 - Physiotheraphy,AHU-L2-CDC-03,AHU Room,2,e0201,,CDC T2
+L02,Child Development Centre,Child Development Centre 2 - Physiotheraphy,AHU-L2-CDC-01,AHU Room,2,e0202,,CDC T3
+L02,Child Development Centre,Child Development Centre 2 - Physiotheraphy,AHU-L2-CDC-04,AHU Room,2,e0203,,CDC T4
+L02,Child Development Centre,Child Development Centre 2 - Physiotheraphy,AHU-L2-CDC-02,AHU Room,2,e0204,,CDC T5
+L02,Child Development Centre,Child Development Centre 2 - Physiotheraphy,AHU-L2-CDC-05,AHU Room,2,e0205,,CDC T6
+L01,Creche/ Nursery,Creche/ Nursery,AHU-L1-CN-01,AHU Room,1,,cant find L1-CN but can find L1-CIN,CN T1
+L06,Central Sterile Supply Unit,Central Sterile Supply Unit (CSSD),AHU-L6-CSSD-02,AHU Room,1,e0605,,CSDD T1
+L06,Central Sterile Supply Unit,Central Sterile Supply Unit (CSSD),AHU-L6-CSSD-03,AHU Room,1,e0628,,CSDD T1
+L06,Central Sterile Supply Unit,Central Sterile Supply Unit (CSSD),AHU-L6-CSSD-01,AHU Room,8,e0606,,CSDD T8
+L03,Dental Clinic,Dental Clinic,AHU-L3-SPD-02,AHU Room,1,e0306,,DC T1
+L03,Dental Clinic,Dental Clinic,AHU-L3-SPD-01,AHU Room,1,e0313,,DC T1
+L03,Dental Clinic,Dental Clinic,AHU-L3-SPD-03,AHU Room,7,e0315,,DC T7
+L01,Emergency Department,Emergency Department 1 - General Area,AHU-L1-ED-03,AHU Room,3,e0112,,ED1 T3
+L01,Emergency Department,Emergency Department 1 - General Area,AHU-L1-ED-04,AHU Room,3,e0113,,ED1 T4
+L01,Emergency Department,Emergency Department 1 - General Area,AHU-L1-ED-02,AHU Room,3,e0114,,ED1 T5
+L01,Emergency Department,Emergency Department 1 - General Area,AHU-L1-ED-01,AHU Room,3,e0116,,ED1 T6
+L01,Emergency Department,Emergency Department 10 - Paediatric Emergency Unit (Day Care),AHU-L1-OT-01,AHU Room,14,e0212,,ED10 T14
+L01,Emergency Department,Emergency Department 6 - Obstetrics and Gynaecology (One Stop Crisis Centre),AHU-L1-OSCC-01,AHU Room,1,e0111,,ED6 T1
+L01,Emergency Department,Emergency Department 9 - Labour and Delivery (PAC),AHU-L1-PAC-01,AHU Room,1,e0110,,ED9 T1
+L01,Enginering Services,Engineering Services,AHU-L1-ES-01,AHU Room,1,e0101,,ES T1
+L03,Genetic Department,Genetic Department 1 - General,AHU-L3-GL-01,AHU Room,5,,cant find L3-GL but can find L3-CL,GD T5
+L03,Genetic Department,Genetic Department 1 - General,AHU-L3-GL-02,AHU Room,5,,cant find L3-GL but can find L3-CL,GD T5
+L01,Housekeeping Services,Housekeeping Services,AHU-L1-HS-01,AHU Room,1,e0104,,HS T1
+L01,Imaging Department,Imaging Department,AHU-L1-ID-04,AHU Room,3,e0115,,ID T3
+L01,Imaging Department,Imaging Department,AHU-L1-ID-03,AHU Room,3,e0118,,ID T3
+L01,Imaging Department,Imaging Department,AHU-L1-ID-02,AHU Room,3,e0120,,ID T3
+L01,Imaging Department,Imaging Department,AHU-L1-ID-01,AHU Room,4,e0121,,ID T4
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-CDR-02,AHU Room,17,e0406,special case: referred to as Incomer AHU-CDR-1 & AHU-CDR-2 in device list,IPD T17
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-TPN-01,AHU Room,19,,cant find any AHU-TPN,IPD T19
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-TPN-02,AHU Room,19,,cant find any AHU-TPN,IPD T19
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-CDR-01,AHU Room,20,e0406,special case: referred to as Incomer AHU-CDR-1 & AHU-CDR-2 in device list,IPD T20
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-L4-PD-02,AHU Room,2,e0407,,IPD T20
+L04,Inpatient Pharmacy Department,Inpatient Pharmacy Department,AHU-L4-PD-01,AHU Room,5,e0404,,IPD T5
+L06,Information Technology Department,Information Technology Department,AHU-L6-IT-01,AHU Room,1,e0611,,ITD T1
+L08,Inpatient Wards - Gynaecology 1,Inpatient Wards - Gynaecology 1,AHU-L8-GY1-01,AHU Room,2,e0804,,IWG1 T2
+L08,Inpatient Wards - Gynaecology 1,Inpatient Wards - Gynaecology 1,AHU-L8-GY1-01,AHU Room,2,,duplicate: e0804,IWG1 T2
+L08,Inpatient Wards - Gynaecology 2,Inpatient Wards - Gynaecology 2,AHU-L8-GY2-01,AHU Room,2,e0805,,IWG2 T2
+L08,Inpatient Wards - Gynaecology 2,Inpatient Wards - Gynaecology 2,AHU-L8-GY2-01,AHU Room,2,,duplicate: e0805,IWG2 T2
+L07,Inpatient Wards - Obstetric 1,Inpatient Wards - Obstetric 1,AHU-L7-OB1-01,AHU Room,4,e0703,,IWO1 T4
+L07,Inpatient Wards - Obstetric 2,Inpatient Wards - Obstetric 2,AHU-L7-OB2-01,AHU Room,4,e0704,,IWO2 T4
+L07,Inpatient Wards - Obstetric 3,Inpatient Wards - Obstetric 3,AHU-L7-OB3-01,AHU Room,4,e0701,,IWO3 T4
+L07,Inpatient Wards - Obstetric 4,Inpatient Wards - Obstetric 4,AHU-L7-OB4-01,AHU Room,4,e0702,,IWO4 T4
+L10,Inpatient Wards - Paediatric Medical Ward 1,Inpatient Wards - Paediatric Medical Ward 1,AHU-L10-PM1-02,AHU Room,3,e1001,,IWPMW1 T3
+L10,Inpatient Wards - Paediatric Medical Ward 1,Inpatient Wards - Paediatric Medical Ward 1,AHU-L10-PM1-01,AHU Room,3,e1002,,IWPMW1 T3
+L10,Inpatient Wards - Paediatric Medical Ward 2,Inpatient Wards - Paediatric Medical Ward 2,AHU-L10-PM2-01,AHU Room,3,e1007,,IWPMW2 T3
+L10,Inpatient Wards - Paediatric Medical Ward 2,Inpatient Wards - Paediatric Medical Ward 2,AHU-L10-PM2-02,AHU Room,3,e1008,,IWPMW2 T3
+L10,Inpatient Wards - Paediatric Medical Ward 3,Inpatient Wards - Paediatric Medical Ward 3,AHU-L10-PM3-01,AHU Room,3,e1003,,IWPMW3 T3
+L10,Inpatient Wards - Paediatric Medical Ward 3,Inpatient Wards - Paediatric Medical Ward 3,AHU-L10-PM3-02,AHU Room,3,e1004,,IWPMW3 T3
+L10,Inpatient Wards - Paediatric Medical Ward 4,Inpatient Wards - Paediatric Medical Ward 4,AHU-L10-PM4-02,AHU Room,3,e1005,,IWPMW4 T3
+L10,Inpatient Wards - Paediatric Medical Ward 4,Inpatient Wards - Paediatric Medical Ward 4,AHU-L10-PM4-01,AHU Room,3,e1006,,IWPMW4 T3
+L09,Inpatient Wards - Paediatric Medical Ward 5,Inpatient Wards - Paediatric Medical Ward 5,AHU-L9-PM5-02,AHU Room,18,e0904,,IWPMW5 T18
+L09,Inpatient Wards - Paediatric Medical Ward 5,Inpatient Wards - Paediatric Medical Ward 5,AHU-L9-PM5-01,AHU Room,3,e0903,,IWPMW5 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 1,Inpatient Wards - Paediatric Surgical Ward 1,AHU-L11-PS1-02,AHU Room,3,e1101,,IWPSW1 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 1,Inpatient Wards - Paediatric Surgical Ward 1,AHU-L11-PS1-01,AHU Room,3,e1102,,IWPSW1 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 2,Inpatient Wards - Paediatric Surgical Ward 2,AHU-L11-PS2-01,AHU Room,3,e1103,,IWPSW2 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 2,Inpatient Wards - Paediatric Surgical Ward 2,AHU-L11-PS2-02,AHU Room,3,e1104,,IWPSW2 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 3,Inpatient Wards - Paediatric Surgical Ward 3,AHU-L11-PS3-01,AHU Room,3,e1107,,IWPSW3 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 3,Inpatient Wards - Paediatric Surgical Ward 3,AHU-L11-PS3-02,AHU Room,3,e1108,,IWPSW3 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 4,Inpatient Wards - Paediatric Surgical Ward 4,AHU-L11-PS4-02,AHU Room,3,e1105,,IWPSW4 T3
+L11,Inpatient Wards - Paediatric Surgical Ward 4,Inpatient Wards - Paediatric Surgical Ward 4,AHU-L11-PS4-01,AHU Room,3,e1106,,IWPSW4 T3
+L06,Library,Library,AHU-L6-LIB-01,AHU Room,1,e0602,,L T1
+L04,Labour and Delivery Unit,Labour and Delivery Unit,AHU-L4-LDS-01,AHU Room,3,,cant find any L4-LDS,LDU T3
+L04,Labour and Delivery Unit,Labour and Delivery Unit,AHU-L4-LDS-02,AHU Room,3,,cant find any L4-LDS,LDU T3
+L04,Labour and Delivery Unit,Labour and Delivery Unit,AHU-L4-LDS-03,AHU Room,3,,cant find any L4-LDS,LDU T3
+L04,Maternity OT,Maternity OT,AHU-L4-MOT-04,AHU Room,11,e0413,,MOT T11
+L04,Maternity OT,Maternity OT,AHU-L4-MOT-02,AHU Room,14,e0414,,MOT T14
+L04,Maternity OT,Maternity OT,AHU-L4-MOT-01,AHU Room,14,e0416,,MOT T14
+L04,Maternity OT,Maternity OT,AHU-L4-MOT-03,AHU Room,8,e0415,,MOT T8
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L5-OT-10,AHU Room,11,e0622,,MOTC T11
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L5-OT-10,AHU Room,11,,duplicate: e0622,MOTC T11
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L05,Main Operation Theatre Complex,Main Operation Theatre Complex (OTC),AHU-L6-OT,AHU Room,14,,mismatch,MOTC T14
+L04,Milk Preparation 1,Milk Preparation 1,AHU-L4-MK-01,AHU Room,1,e0403,,MP1 T1
+L06,Medical Record,Medical Record,AHU-L6-MR-01,AHU Room,1,e0625,,MR T1
+L01,Mortuary Services,Mortuary Services,AHU-L1-MO-01,AHU Room,1,e0103,,MS T1
+L01,Medical Store,Medical Store,AHU-L1-MS-02,AHU Room,5,e0107,,MS T5
+L01,Medical Store,Medical Store,AHU-L1-MS-01,AHU Room,5,e0108,,MS T5
+L02,Medical Social Services,Medical Social Services,AHU-L2-MSS-01,AHU Room,1,e0207,,MSS T1
+L09,Nephrology/ Dialysis Ward and Renal Treatment Centre,Nephrology/ Dialysis Ward and Renal Treatment Centre,AHU-L9-NP-01,AHU Room,3,e0901,,NDWRTC T3
+L09,Nephrology/ Dialysis Ward and Renal Treatment Centre,Nephrology/ Dialysis Ward and Renal Treatment Centre,AHU-L9-NP-02,AHU Room,3,e0902,,NDWRTC T3
+L04,Neonatal Intensive Care Unit,Neonatal Intensive Care Unit (NICU),AHU-L4-NI-01,AHU Room,3,,cannot find L4-NI,NICU T3
+L04,Neonatal Intensive Care Unit,Neonatal Intensive Care Unit (NICU),AHU-L4-NI-02,AHU Room,3,,cannot find L4-NI,NICU T3
+L09,Neonatology Wards 1,Neonatology Wards 1,AHU-L9-NW1-01,AHU Room,3,e0905,,NW1 T3
+L09,Neonatology Wards 1,Neonatology Wards 1,AHU-L9-NW1-02,AHU Room,3,e0906,,NW1 T3
+L09,Neonatology Wards 2,Neonatology Wards 2,AHU-L9-NW2-02,Neonatalogy Wards 2 ,3,e0907,,NW2 T3
+L09,Neonatology Wards 2,Neonatology Wards 2,AHU-L9-NW2-01,AHU Room,3,e0908,,NW2 T3
+L08,On Call Complex,On Call Complex,AHU-L8-OCC-01,AHU Room,15,e0803,,OCC T15
+L02,O&G Specialist Clinic,O&G Specialist Clinic,AHU-L2-SPG-04,AHU Room,3,e0215,,OGSC T3
+L02,O&G Specialist Clinic,O&G Specialist Clinic,AHU-L2-SPG-03,AHU Room,3,e0216,,OGSC T3
+L02,O&G Specialist Clinic,O&G Specialist Clinic,AHU-L2-SPG-02,AHU Room,3,e0217,,OGSC T3
+L02,O&G Specialist Clinic,O&G Specialist Clinic,AHU-L2-SPG-01,AHU Room,3,e0218,,OGSC T3
+L04,Obstetric High Risk Unit,Obstetric High Risk Unit,AHU-L4-OHR-01,AHU Room,3,e0412,,OHRU T3
+L02,Outpatient Pharmacy,Outpatient Pharmacy,AHU-L2-OP-01,AHU Room,2,e0208,,OP T2
+L05,Paediatric Burn Unit,Paediatric Burn Unit,AHU-L5-PBU-02,AHU Room,1,e0509,,PBU T1
+L05,Paediatric Burn Unit,Paediatric Burn Unit,AHU-L5-PBU-01,AHU Room,12,e0511,,PBU T12
+L03,Pathology Department,Pathology Department 1 - Transfusion Medicine Laboratory (Blood Bank),AHU-L3-PT-04 (Admin),AHU Room,1,e0301,,PD1 T1
+L03,Pathology Department,Pathology Department 1 - Transfusion Medicine Laboratory (Blood Bank),AHU-L3-PT-03 (Microb),AHU Room,10,e0303,,PD1 T10
+L03,Pathology Department,Pathology Department 5 - Administrative and Shared Facilities,AHU-L3-PT-02,AHU Room,9,e0401,,PD5 T9
+L03,Pathology Department,Pathology Department 5 - Administrative and Shared Facilities,AHU-L3-PT-01 ,AHU Room,9,e0402,,PD5 T9
+L03,Post Graduate Medical Centre and Continuous Medical Education ,Post Graduate Medical Centre and Continuous Medical Education,AHU-L3-PGMC-02,AHU Room,1,e0210,,PGMCCME T1
+L03,Post Graduate Medical Centre and Continuous Medical Education ,Post Graduate Medical Centre and Continuous Medical Education,AHU-L3-PGMC-01,AHU Room,1,e0211,,PGMCCME T1
+L05,Paediatric High Dependency Unit (DWP) ,Paediatric High Dependency Unit (DWP),AHU-L5-PHDU-01,AHU Room,3,e0502,,PHDU T3
+L05,Paediatric Intensive Care Unit,Paediatric Intensive Care Unit (PICU),AHU-L5-PICU-02,AHU Room,3,e0501,,PICU T3
+L05,Paediatric Intensive Care Unit,Paediatric Intensive Care Unit (PICU),AHU-L5-PICU-01,AHU Room,3,e0510,,PICU T3
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 1 - Main,AHU-L3-SPP-03,AHU Room,1,e0308,,PSC1 T1
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 1 - Main,AHU-L3-SPP-01,AHU Room,1,e0311,,PSC1 T1
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 1 - Main,AHU-L3-SPP-02,AHU Room,1,e0312,,PSC1 T1
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 1 - Main,AHU-L3-CPC-01,AHU Room,1,e0314,,PSC1 T1
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 2 - Otorhinolaryngology (ENT) Clinic,AHU-L3-EOA-01,AHU Room,1,,cant find any L3-EOA,PSC2 T1
+L03,Paediatric Specialist Clinic,Paediatric Specialist Clinic 2 - Otorhinolaryngology (ENT) Clinic,AHU-L3-EOA-02,AHU Room,1,,cant find any L3-EOA,PSC2 T1
+L05,Respiratory and Haemodynamic Unit,Respiratory and Haemodynamic Unit  1 - General,AHU-L5-RHU-01,AHU Room,1,e0504,,RHU T1
+L03,RQA Unit,RQA Unit,AHU-L3-RQA/HEU-01,AHU Room,1,e0304,,RQAU T1
+L01,Shared Facilities 1,Shared Facilities 1 - 1 - General,AHU-L1-SF-01,AHU Room,1,e0117,,SF1 T1
+L03,Shared Facilities 3,Shared Facilities 3,AHU-L3-SF-01,AHU Room,1,e0307,,SF3 T1
+L04,Shared Facilities 4,Shared Facilities 4 - 1 - General,AHU-L4-SF-01,AHU Room,1,e0419,,SF4 T1
+L05,Shared Facilities 5,Shared Facilities 5 - 1 - General,AHU-L5-SF-09,AHU Room,1,e0508,,SF5 T1
+L06,Shared Facilities 6,Shared Facilities 6,AHU-L6-SF-01,AHU Room,1,e0626,,SF6 T1
+L06,Specialist Office Complex,Specialist Office Complex,AHU-L6-SOC-01,AHU Room,6,e0607,,SOC T6
+L06,Specialist Office Complex,Specialist Office Complex,AHU-L6-SOC-02,AHU Room,6,e0627,,SOC T6
+L06,Specialist Office Complex,Specialist Office Complex,AHU-L6-SOC-01,AHU Room,6,,duplicate: e0607,SOC T6
+L01,Security Services,Security Services,AHU-L1-SS/T-01,AHU Room,1,e0109,,SS T1
+L02,Women Health Unit,Women Health Unit,AHU-L2-WHU-01,AHU Room,21,e0213,,WHU T21
+L02,Women Health Unit,Women Health Unit,AHU-L2-WHU-02,AHU Room,21,e0214,,WHU T21
