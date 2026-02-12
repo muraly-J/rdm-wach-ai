@@ -26,7 +26,7 @@ def fetch_device_data(start_time, end_time, device_ids, fields, resample_freq=No
         pd.DataFrame: Pivoted and optionally resampled DataFrame
     """
 
-    client = InfluxDBClient(url=url, token=token, org=org,timeout=60000)
+    client = InfluxDBClient(url=url, token=token, org=org,timeout=18000000)
     query_api = client.query_api()
 
     # Construct regex for measurements
@@ -148,7 +148,7 @@ if __name__ == "__main__":
 ]
 
 
-    start = "2026-01-28T00:00:00Z"
+    start = "2025-01-12T00:00:00Z"
     end   = "2026-02-12T00:00:00Z"
 
     df = fetch_device_data(
@@ -166,5 +166,6 @@ if __name__ == "__main__":
 
     os.makedirs("data/raw", exist_ok=True)
     #df.to_parquet("energy_2026_feb.parquet")
-    df.to_csv("data/raw/raw_device_data.csv")
+    #df.to_csv("data/raw/raw_device_data.csv")
+    df.to_csv("data/raw/raw_one_year.csv")
     print("Saved to data/raw/raw_device_data.csv")
