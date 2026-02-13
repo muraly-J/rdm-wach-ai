@@ -1,0 +1,42 @@
+{
+  "training_date": "2026-02-13T15:37:46.181879",
+  "model_type": "IsolationForest",
+  "sklearn_version": "1.5.3",
+  "model_config": {
+    "n_estimators": 300,
+    "max_samples": "auto",
+    "contamination": 0.02,
+    "max_features": 1.0,
+    "bootstrap": false,
+    "n_jobs": -1,
+    "random_state": 42,
+    "verbose": 0
+  },
+  "feature_config": {
+    "rolling_window": 4,
+    "use_power_delta": true,
+    "use_imbalance": true,
+    "use_rolling_mean": true
+  },
+  "training_stats": {
+    "n_samples": 9477,
+    "n_features": 8,
+    "n_anomalies_detected": 190,
+    "contamination_actual": 0.020048538567057086,
+    "score_mean": 0.17795399746291501,
+    "score_std": 0.07000450476139934,
+    "score_min": -0.07679143056504267,
+    "score_max": 0.2620542989050745
+  },
+  "feature_names": [
+    "power_total",
+    "power_factor_avg",
+    "current_l1",
+    "current_l2",
+    "current_l3",
+    "current_imbalance",
+    "rolling_mean_1h",
+    "power_delta"
+  ],
+  "n_features": 8
+}

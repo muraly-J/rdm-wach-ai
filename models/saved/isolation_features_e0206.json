@@ -1,0 +1,10 @@
+[
+  "power_total",
+  "power_factor_avg",
+  "current_l1",
+  "current_l2",
+  "current_l3",
+  "current_imbalance",
+  "rolling_mean_1h",
+  "power_delta"
+]

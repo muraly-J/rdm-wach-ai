@@ -1,0 +1,31 @@
+{
+  "window_size": 96,
+  "forecast_horizon": 1,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "input_size": 12,
+  "hidden_size": 128,
+  "num_layers": 3,
+  "dropout": 0.2,
+  "bidirectional": true,
+  "batch_size": 64,
+  "epochs": 100,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-05,
+  "patience": 15,
+  "features": [
+    "power_total",
+    "power_factor_avg",
+    "current_l1",
+    "current_l2",
+    "current_l3",
+    "voltage_avg",
+    "apparent_power_total",
+    "hour",
+    "day_of_week",
+    "weekend",
+    "rolling_mean_4h",
+    "power_delta"
+  ]
+}
