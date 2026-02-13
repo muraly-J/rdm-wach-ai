@@ -56,7 +56,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
 # Data file
-DATA_FILE = DATA_DIR / "cleaned_longest.parquet"
+DATA_FILE = DATA_DIR / "clean_longest.parquet"
 
 
 # ============================================================================
@@ -208,14 +208,17 @@ class E0206DataPreparation:
         self.scaler = StandardScaler()
         
         # Feature columns
-        self.target = 'kw'
+        self.target = 'power_total'  # Was 'kw'
         self.electrical_features = [
-            'p_l1', 'p_l2', 'p_l3',
-            'i_l1', 'i_l2', 'i_l3',
-            'v_l1', 'v_l2', 'v_l3',
-            'pf', 'kvar_tot'
+            'power_l1', 'power_l2', 'power_l3',     # Was 'p_l1', 'p_l2', 'p_l3'
+            'current_l1', 'current_l2', 'current_l3', # Was 'i_l1', 'i_l2', 'i_l3'
+            'volts_l1_n', 'volts_l2_n', 'volts_l3_n', # Was 'v_l1', 'v_l2', 'v_l3'
+            'power_factor_avg',                       # Was 'pf'
+            'reactive_power_total'                    # Was 'kvar_tot'
         ]
-        self.time_features = ['hour_of_day', 'day_of_week', 'weekend_flag']
+        # Note: If you have hour_of_day, etc., ensure they are in your dataframe 
+        # or remove them from self.time_features
+        self.time_features = [] # Leave empty if not yet engineered in the parquet
         
         # Total: 1 target history + 11 electrical + 3 time = 15 features per timestep
         # But we only use target history (kw) + 11 electrical = 12 features
@@ -678,18 +681,21 @@ def main():
         print("   Install with: pip install torch")
         return
     
-    # Check for GPU availability
-    if not torch.cuda.is_available():
-        print("\nERROR: GPU (CUDA) not available")
+    # Check for GPU availability (CUDA for NVIDIA, MPS for Apple Silicon)
+    if torch.cuda.is_available():
+        device = 'cuda'
+        print(f"\nUsing device: {device}")
+        print(f"   GPU Device: {torch.cuda.get_device_name(0)}")
+        print(f"   GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB")
+    elif torch.backends.mps.is_available():
+        device = 'mps'
+        print(f"\nUsing device: {device} (Apple Metal Performance Shaders)")
+        print(f"   GPU: Apple Silicon")
+    else:
+        print("\nERROR: No GPU available")
         print("   This script requires GPU for training")
-        print("   Please ensure CUDA is properly installed and configured")
+        print("   Supported: CUDA (NVIDIA) or MPS (Apple Silicon)")
         return
-    
-    # Set device to GPU
-    device = 'cuda'
-    print(f"\nUsing device: {device}")
-    print(f"   GPU Device: {torch.cuda.get_device_name(0)}")
-    print(f"   GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB")
     
     # Load cleaned data
     print(f"\nLoading cleaned dataset from: {DATA_FILE}")

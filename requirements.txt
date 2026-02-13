@@ -1,3 +1,9 @@
 pandas
 influxdb_client
 python-dotenv
+matplotlib
+seaborn
+pyarrow
+tqdm
+torch
+scikit-learn
