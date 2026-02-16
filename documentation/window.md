@@ -62,9 +62,9 @@ rolling_mean_4
 
 rolling_std_4
 
-# Data Cleaning
+<!-- # Data Cleaning -->
 
-Out-of-range values were replaced with NaN based on domain thresholds:
+<!-- Out-of-range values were replaced with NaN based on domain thresholds:
 
 Feature Type	Range Applied
 Power	0 – 10 kW
@@ -72,7 +72,7 @@ Current	0 – 20 A
 Voltage	200 – 260 V
 Power Factor	0 – 1
 
-Rows with missing lag/rolling values were dropped before modeling.
+Rows with missing lag/rolling values were dropped before modeling. -->
 
 # Validation Strategy
 
@@ -105,17 +105,23 @@ objective = reg:squarederror
 random_state = 42
 
 ## Backtesting Results
-# Overall Performance (Average Across Splits)
-Metric	Value
-Mean MAE	0.1028
-Mean RMSE	0.1456
-Mean MAPE	2.92%
-Mean R²	0.8231
+## Overall Performance (Average Across Splits)
 
-# Split wise result
-Split	MAE	RMSE	MAPE	R²
-1	0.2137	0.2710	6.06%	0.4191
-2	0.1830	0.2607	4.89%	0.7933
-3	0.0634	0.1046	2.19%	0.9231
-4	0.0202	0.0375	0.64%	0.9885
-5	0.0334	0.0541	0.84%	0.9915
+
+| Metric     | Value   |
+|------------|---------|
+| Mean MAE   | 0.1028  |
+| Mean RMSE  | 0.1456  |
+| Mean MAPE  | 2.92%   |
+| Mean R²    | 0.8231  |
+
+
+##  Rolling Window Backtesting Results
+
+| Split | MAE    | RMSE   | MAPE  | R²     |
+|-------|--------|--------|-------|--------|
+| 1     | 0.2137 | 0.2710 | 6.06% | 0.4191 |
+| 2     | 0.1830 | 0.2607 | 4.89% | 0.7933 |
+| 3     | 0.0634 | 0.1046 | 2.19% | 0.9231 |
+| 4     | 0.0202 | 0.0375 | 0.64% | 0.9885 |
+| 5     | 0.0334 | 0.0541 | 0.84% | 0.9915 |
