@@ -1,5 +1,5 @@
 {
-  "training_date": "2026-02-13T15:37:46.181879",
+  "training_date": "2026-02-16T10:14:59.626622",
   "model_type": "IsolationForest",
   "sklearn_version": "1.5.3",
   "model_config": {

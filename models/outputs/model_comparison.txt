@@ -1,0 +1,55 @@
+TiDE:
+Metrics:
+  MAE:  0.3295 kW
+  RMSE: 0.4208 kW
+  MAPE: 9.11%
+  R²:   0.4226
+
+Transformer:
+Metrics:
+  MAE:  0.2787 kW
+  RMSE: 0.3527 kW
+  MAPE: 7.75%
+  R²:   0.5944
+
+TCN:
+Metrics:
+  MAE:  0.3421 kW
+  RMSE: 0.4078 kW
+  MAPE: 9.39%
+  R²:   0.4578
+
+LSTM:
+Metrics:
+  MAE:  0.3283 kW
+  RMSE: 0.4059 kW
+  MAPE: 9.01%
+  R²:   0.4627
+
+Enhanced N-Beats:
+Metrics:
+  MAE:  0.2859 kW
+  RMSE: 0.3569 kW
+  MAPE: 7.85%
+  R²:   0.5847
+
+N-Beats:
+Metrics:
+  MAE:  0.842605 kW
+  RMSE: 0.942423 kW
+  MAPE: 34.366694%
+  R²:   -1.842610
+
+Improved Transformer:
+Metrics:
+  MAE:  0.3446 kW
+  RMSE: 0.4218 kW
+  MAPE: 9.54%
+  R²:   0.4218
+
+Improved N-Beats:
+Metrics:
+  MAE:  0.2805 kW
+  RMSE: 0.3596 kW
+  MAPE: 7.69%
+  R²:   0.5799
