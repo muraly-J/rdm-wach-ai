@@ -96,55 +96,30 @@ def fetch_device_data(start_time, end_time, device_ids, fields, resample_freq=No
 if __name__ == "__main__":
 
     devices = ["e0206"]
-
-
+    
     fields = [
-    "apparent_energy",
-    "apparent_power_demand",
-    "apparent_power_l1",
-    "apparent_power_l2",
-    "apparent_power_l3",
+    # "apparent_power_l1",
+    # "apparent_power_l2",
+    # "apparent_power_l3",
     "apparent_power_total",
-    "current_avg",
+
     "current_l1",
-    "current_l1_thd",
     "current_l2",
     "current_l3",
-    "current_l3_thd",
-    "current_unbalance",
-    "digital_input_1_and_2",
-    "energy_export",
-    "energy_import",
-    "freq",
-    "max_power_demand",
-    "power_demand",
+
     "power_factor_avg",
-    "power_factor_l1",
-    "power_factor_l2",
-    "power_factor_l3",
+    # "power_factor_l1",
+    # "power_factor_l2",
+    # "power_factor_l3",
+
     "power_l1",
     "power_l2",
     "power_l3",
     "power_total",
-    "reactive_energy_export",
-    "reactive_energy_import",
-    "reactive_power_demand",
-    "reactive_power_l1",
-    "reactive_power_l2",
-    "reactive_power_l3",
-    "reactive_power_total",
-    "volts_l1_l2",
+
     "volts_l1_n",
-    "volts_l1_thd",
-    "volts_l2_l3",
     "volts_l2_n",
-    "volts_l2_thd",
-    "volts_l3_l1",
-    "volts_l3_n",
-    "volts_l3_thd",
-    "volts_l_l_avg",
-    "volts_l_n_avg",
-    "volts_unbalance"
+    "volts_l3_n"
 ]
 
 
