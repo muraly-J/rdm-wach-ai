@@ -1,0 +1,2 @@
+controller,total_rows_before_cleaning,rows_after_cleaning,data_retained_percentage,invalid_rows_detected,target_missing_rows_dropped,sparse_rows_dropped,flatline_rows_dropped,final_missing_values
+e0202,9478,8223,86.76,0,0,0,1255,0

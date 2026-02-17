@@ -1,0 +1,2 @@
+result,table,controller,site,power_factor_avg,units,current_l1,current_l2,current_l3,volts_l1_n,volts_l2_n,volts_l3_n,apparent_power_total,power_l1,power_l2,power_l3,power_total
+0.0,2.0,0.0,0.0,0.48666666666666664,0.0,5.506666666666667,3.74,5.853333333333333,,,,3.5351666666666666,1.06408,0.6117739999999999,0.9072533333333334,2.5831733333333333
