@@ -1,2 +1,0 @@
-total_rows_before_cleaning,rows_after_cleaning,data_retained_percentage,invalid_rows_detected,target_missing_rows_dropped,sparse_rows_dropped,flatline_rows_dropped,final_missing_values
-9480,8242,86.94,1,0,0,1238,0

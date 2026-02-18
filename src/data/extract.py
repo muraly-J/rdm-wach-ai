@@ -21,7 +21,7 @@ def fetch_device_data(start_time, end_time, device_id, fields, resample_freq=Non
     Fetch raw pivoted data for a single device from InfluxDB.
     Returns a DataFrame with controller column.
     """
-    client = InfluxDBClient(url=url, token=token, org=org, timeout=18000000)
+    client = InfluxDBClient(url=url, token=token, org=org, timeout=180000000)
     query_api = client.query_api()
 
     # Construct regex for measurements
@@ -89,17 +89,17 @@ def fetch_device_data(start_time, end_time, device_id, fields, resample_freq=Non
 if __name__ == "__main__":
 
     # List of controllers you want to fetch (change as needed)
-    devices = [f"e020{i}" for i in range(1, 6)]  # e0201..e0205
+    devices = [f"e02{i}" for i in range(10, 12)]  # e0201..e0205
 
     fields = [
-        "apparent_power_total",
+        #"apparent_power_total",
         "current_l1",
         "current_l2",
         "current_l3",
         "power_factor_avg",
-        "power_l1",
-        "power_l2",
-        "power_l3",
+        # "power_l1",
+        # "power_l2",
+        # "power_l3",
         "power_total",
         "volts_l1_n",
         "volts_l2_n",

@@ -1,0 +1,2 @@
+controller,total_rows,out_of_range_counts,total_stuck_points
+e0210,9466,"{'power_total': 0, 'current_l1': 0, 'current_l2': 0, 'current_l3': 0, 'volts_l1_n': 0, 'volts_l2_n': 0, 'volts_l3_n': 0, 'power_factor_avg': 0}","{'power_total': 4530, 'current_l1': 4530, 'current_l2': 4530, 'current_l3': 4530, 'volts_l1_n': 1293, 'volts_l2_n': 1281, 'volts_l3_n': 1294, 'power_factor_avg': 7270}"
