@@ -1,4 +1,4 @@
-# clean_data_quality_csv_only.py
+# clean_data_quality_parquet_only.py
 
 import os
 import pandas as pd
@@ -85,18 +85,21 @@ for raw_file in raw_files:
     # ---------------- SAVE RESULTS ----------------
     summary_path = os.path.join(
         quality_folder,
-        f"data_quality_summary_{controller_name}.txt"
+        f"data_quality_summary_{controller_name}.csv"
     )
 
     raw_copy_path = os.path.join(
         quality_folder,
-        f"raw_data_{controller_name}.csv"
+        f"raw_data_{controller_name}.parquet"
     )
 
+    # Save summary as CSV
     summary_df.to_csv(summary_path, index=False)
-    df.to_csv(raw_copy_path, index=False)
+
+    # Save raw data as PARQUET
+    df.to_parquet(raw_copy_path, index=False, engine="pyarrow")
 
     print(f"Saved summary → {summary_path}")
-    print(f"Saved raw copy → {raw_copy_path}")
+    print(f"Saved raw copy (parquet) → {raw_copy_path}")
 
 print("\nAll controllers processed successfully!")

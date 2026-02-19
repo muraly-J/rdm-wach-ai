@@ -4,13 +4,13 @@ This project involves rolling window training and evaluation of controllers for 
 
 We performed rolling training for multiple controllers using train-test splits and calculated standard performance metrics:
 
-# MAE (Mean Absolute Error) – average magnitude of errors.
+ MAE (Mean Absolute Error) – average magnitude of errors.
 
-# RMSE (Root Mean Squared Error) – penalizes larger errors more than MAE.
+ RMSE (Root Mean Squared Error) – penalizes larger errors more than MAE.
 
-# MAPE (Mean Absolute Percentage Error) – error as a percentage.
+ MAPE (Mean Absolute Percentage Error) – error as a percentage.
 
-# R² (Coefficient of Determination) – indicates goodness of fit; 1 is perfect, negative means poor fit.
+ R² (Coefficient of Determination) – indicates goodness of fit; 1 is perfect, negative means poor fit.
 
 
 ## Data & Controllers
@@ -21,11 +21,11 @@ e0201, e0202, e0203
 
 raw_data_e0201 → raw_data_e0211 (11 controllers)
 
-# Training data: Each split had ~5760 rows and 16–20 features depending on the controller.
+ Training data: Each split had ~5760 rows and 16–20 features depending on the controller.
 
-# Testing data: Each split had ~672 rows.
+ Testing data: Each split had ~672 rows.
 
-# Rolling splits: 3 splits for e0201–e0203, 5 splits for raw_data controllers.
+ Rolling splits: 3 splits for e0201–e0203, 5 splits for raw_data controllers.
 
 ## Goal: Compare model performance and stability across splits.
 
