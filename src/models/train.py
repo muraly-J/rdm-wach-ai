@@ -1,14 +1,13 @@
-# train_rolling_multi_controller_safe.py
+# train_rolling_multi_controller_fixed.py
 
 import os
 import pandas as pd
 import numpy as np
 import xgboost as xgb
-import joblib  # ✅ added to save/load model
+import joblib
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-
-# EVALUATION FUNCTION
+# ---------------- EVALUATION ----------------
 def evaluate(y_true, y_pred):
     mae = mean_absolute_error(y_true, y_pred)
     rmse = np.sqrt(mean_squared_error(y_true, y_pred))
@@ -16,8 +15,7 @@ def evaluate(y_true, y_pred):
     mape = np.mean(np.abs((y_true - y_pred) / (y_true + 1e-8))) * 100
     return mae, rmse, r2, mape
 
-
-# ROLLING WINDOW TRAINING
+# ---------------- ROLLING TRAINING ----------------
 def rolling_train(df, controller_name,
                   target_col="power_total",
                   rows_per_day=96,
@@ -26,69 +24,62 @@ def rolling_train(df, controller_name,
 
     print(f"\nStarting rolling training for {controller_name}")
 
-    feature_cols = df.drop(columns=[target_col, "controller"], errors="ignore").columns
+    # DROP UNNECESSARY COLUMNS
+    drop_cols = ['result', 'table', 'controller', 'site', 'units']
+    df = df.drop(columns=[c for c in drop_cols if c in df.columns])
+
+    # SELECT NUMERIC FEATURES ONLY
+    feature_cols = df.drop(columns=[target_col], errors="ignore").select_dtypes(include=[np.number]).columns
+    print(f"Features used for training ({len(feature_cols)}): {list(feature_cols)}")
 
     train_size = train_days * rows_per_day
     test_size = test_days * rows_per_day
 
     metrics_list = []
     all_test_outputs = []
-    last_model = None  # ✅ store last successfully trained model for .pkl
-
+    last_model = None
     split_counter = 1
 
     for start in range(0, len(df) - train_size - test_size + 1, test_size):
-
         train_idx = slice(start, start + train_size)
         test_idx = slice(start + train_size, start + train_size + test_size)
 
         X_train = df.iloc[train_idx][feature_cols]
         y_train = df.iloc[train_idx][target_col]
-
         X_test = df.iloc[test_idx][feature_cols]
         y_test = df.iloc[test_idx][target_col]
 
-        print(f"\nSplit {split_counter}")
-        print("Train shape:", X_train.shape)
-        print("Test shape:", X_test.shape)
+        print(f"\nSplit {split_counter} | Train: {X_train.shape} | Test: {X_test.shape}")
 
         # SAFETY CHECKS
         if len(X_train) == 0 or len(X_test) == 0:
             print("Skipped: Empty train/test window")
             split_counter += 1
             continue
-
         if y_train.nunique() <= 1:
-            print("Skipped: Target is constant in this window")
+            print("Skipped: Target is constant")
             split_counter += 1
             continue
-
         if X_train.isna().sum().sum() > 0:
-            print("NaN detected in X_train → Filling with 0")
             X_train = X_train.fillna(0)
-
         if np.isinf(X_train).sum().sum() > 0:
-            print("Inf detected in X_train → Replacing with 0")
             X_train = X_train.replace([np.inf, -np.inf], 0)
 
         # TRAIN MODEL
         try:
             model = xgb.XGBRegressor(
-                n_estimators=200,  # reduced from 500 for speed
+                n_estimators=200,
                 max_depth=5,
                 learning_rate=0.05,
                 objective='reg:squarederror',
                 random_state=42,
                 n_jobs=-1
             )
-
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test)
-
-            last_model = model  # ✅ store last trained model
-
+            last_model = model
         except Exception as e:
-            print(f"Split {split_counter} failed due to: {e}")
+            print(f"Split {split_counter} failed: {e}")
             split_counter += 1
             continue
 
@@ -111,7 +102,6 @@ def rolling_train(df, controller_name,
             "predicted": y_pred
         })
         all_test_outputs.append(split_df)
-
         split_counter += 1
 
     if len(metrics_list) == 0:
@@ -134,82 +124,47 @@ def rolling_train(df, controller_name,
 
     return all_test_outputs_df, metrics_df, overall_metrics, last_model
 
-
-# SAVE RESULTS + MODEL
+# ---------------- SAVE RESULTS ----------------
 def save_results(test_output_df, metrics_df, overall_metrics,
                  final_model, controller_name):
 
-    # Save in your requested folder
     output_folder = os.path.join(r"D:\AHU\rdm-wach-ai\paraquet_data\models", controller_name)
     os.makedirs(output_folder, exist_ok=True)
 
-    test_output_df.to_csv(
-        os.path.join(output_folder, f"{controller_name}_test_predictions.csv"),
-        index=False
-    )
+    test_output_df.to_csv(os.path.join(output_folder, f"{controller_name}_test_predictions.csv"), index=False)
+    metrics_df.to_csv(os.path.join(output_folder, f"{controller_name}_metrics_per_split.csv"), index=False)
+    pd.DataFrame([overall_metrics]).to_csv(os.path.join(output_folder, f"{controller_name}_metrics_summary.csv"), index=False)
+    joblib.dump(final_model, os.path.join(output_folder, f"{controller_name}_model.pkl"))
 
-    metrics_df.to_csv(
-        os.path.join(output_folder, f"{controller_name}_metrics_per_split.csv"),
-        index=False
-    )
+    print(f"\nSaved results AND model for {controller_name} at {output_folder}")
 
-    pd.DataFrame([overall_metrics]).to_csv(
-        os.path.join(output_folder, f"{controller_name}_metrics_summary.csv"),
-        index=False
-    )
-
-    # ✅ Save trained model as .pkl
-    model_path = os.path.join(output_folder, f"{controller_name}_model.pkl")
-    joblib.dump(final_model, model_path)
-    print(f"\nSaved results AND model (.pkl) for {controller_name} in {output_folder}")
-
-
-# MAIN PROCESS
+# ---------------- MAIN ----------------
 if __name__ == "__main__":
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    gold_folder = os.path.join(r"D:\AHU\rdm-wach-ai\paraquet_data\gold")
-
-    feature_files = [f for f in os.listdir(gold_folder)
-                     if f.endswith(".parquet") and f.startswith("features_")]
+    gold_folder = r"D:\AHU\rdm-wach-ai\paraquet_data\gold"
+    feature_files = [f for f in os.listdir(gold_folder) if f.endswith(".parquet") and f.startswith("features_")]
 
     if not feature_files:
-        print("No feature datasets found.")
+        print("No feature datasets found. Exiting.")
         exit()
 
     for file in feature_files:
-
         controller_name = file.replace("features_", "").replace(".parquet", "")
         path = os.path.join(gold_folder, file)
-
-        print(f"\n==============================")
-        print(f"Training controller: {controller_name}")
-        print(f"==============================")
+        print(f"\n==============================\nTraining controller: {controller_name}\n==============================")
 
         try:
             df = pd.read_parquet(path, engine="pyarrow")
-
-            test_output_df, metrics_df, overall_metrics, final_model = rolling_train(
-                df,
-                controller_name
-            )
+            test_output_df, metrics_df, overall_metrics, final_model = rolling_train(df, controller_name)
 
             print("\nRolling Summary:")
             for k, v in overall_metrics.items():
                 print(f"{k}: {v}")
 
-            save_results(
-                test_output_df,
-                metrics_df,
-                overall_metrics,
-                final_model,
-                controller_name
-            )
+            save_results(test_output_df, metrics_df, overall_metrics, final_model, controller_name)
 
         except Exception as e:
-            print(f"\nController {controller_name} FAILED.")
-            print("Reason:", e)
-            print("Skipping this controller...\n")
+            print(f"Controller {controller_name} FAILED. Reason: {e}")
             continue
 
     print("\nAll controllers processed!")

@@ -1,0 +1,10 @@
+artifact_location: file:///d:/AHU/rdm-wach-ai/paraquet_data/new_notebook/mlruns/999163681381159645/models/m-b220125bea0341bbbebd248684402a87/artifacts
+creation_timestamp: 1771573067227
+experiment_id: '999163681381159645'
+last_updated_timestamp: 1771573100707
+model_id: m-b220125bea0341bbbebd248684402a87
+model_type: null
+name: xgb_model
+source_run_id: 7459aa58d69946b5b58806d8893d28b7
+status: 2
+status_message: null

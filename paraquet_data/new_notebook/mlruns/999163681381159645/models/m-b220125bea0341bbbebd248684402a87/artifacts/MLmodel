@@ -1,0 +1,22 @@
+artifact_path: file:///d:/AHU/rdm-wach-ai/paraquet_data/new_notebook/mlruns/999163681381159645/models/m-b220125bea0341bbbebd248684402a87/artifacts
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.9.0
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: xgb
+    xgb_version: 2.1.4
+mlflow_version: 3.1.4
+model_id: m-b220125bea0341bbbebd248684402a87
+model_size_bytes: 1132945
+model_uuid: m-b220125bea0341bbbebd248684402a87
+prompts: null
+run_id: 7459aa58d69946b5b58806d8893d28b7
+utc_time_created: '2026-02-20 07:37:47.322893'

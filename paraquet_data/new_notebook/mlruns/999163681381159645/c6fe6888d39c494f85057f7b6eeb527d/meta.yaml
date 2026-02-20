@@ -1,0 +1,14 @@
+artifact_uri: file:///d:/AHU/rdm-wach-ai/paraquet_data/new_notebook/mlruns/999163681381159645/c6fe6888d39c494f85057f7b6eeb527d/artifacts
+end_time: 1771573044976
+entry_point_name: ''
+experiment_id: '999163681381159645'
+lifecycle_stage: active
+run_id: c6fe6888d39c494f85057f7b6eeb527d
+run_name: XGBoost_Run1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771573043493
+status: 4
+tags: []
+user_id: karki
