@@ -1,0 +1,12 @@
+{
+    "energy_fields": [
+        "current_l1",
+        "current_l2",
+        "current_l3",
+        "power_factor_avg",
+        "power_total",
+        "volts_l1_n",
+        "volts_l2_n",
+        "volts_l3_n"
+    ]
+}

@@ -1,0 +1,12 @@
+pandas==2.1.0
+numpy==1.26.0
+influxdb-client==1.35.0
+python-dotenv==1.0.0
+
+pandas
+numpy
+python-dotenv
+influxdb-client
+python-dateutil
+pyarrow
+setuptools
