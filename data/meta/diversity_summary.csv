@@ -1,0 +1,6 @@
+metric,unhealthy_hours,percentage,ml_feasible
+energy_score,207010,49.36260927209168,ML_OK
+pf_score,114491,27.300973374093275,ML_OK
+unbalance_score,130456,31.107910512535593,ML_OK
+thd_score,120375,28.704043723143986,ML_OK
+overload_score,22371,5.33448109765694,ML_OK
