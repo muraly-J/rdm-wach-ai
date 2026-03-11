@@ -1,0 +1,6 @@
+component,anomaly_percent,ahu_ml_percent,stationary_percent,decision
+energy_score,49.36,0.0,0,NO-GO
+pf_score,27.3,0.0,0,NO-GO
+unbalance_score,31.11,0.0,0,NO-GO
+thd_score,28.7,0.0,0,NO-GO
+overload_score,5.33,5.32,0,NO-GO

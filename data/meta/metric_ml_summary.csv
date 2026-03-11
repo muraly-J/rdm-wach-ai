@@ -1,0 +1,6 @@
+metric,AHUs_valid_for_ML,total_AHUs,percentage
+delta_kwh,36,43,83.72
+power_factor_avg,1,43,2.33
+current_unbalance,5,43,11.63
+composite_thd_24h,0,43,0.0
+power_total,6,43,13.95
