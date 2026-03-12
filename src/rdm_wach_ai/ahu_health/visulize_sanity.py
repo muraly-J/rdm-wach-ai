@@ -24,7 +24,7 @@ detail_df = pd.read_csv(DETAIL_PATH)
 summary_df = pd.read_csv(SUMMARY_PATH)
 
 ############################################
-# 1️⃣ ML CANDIDATE HEATMAP
+#  ML CANDIDATE HEATMAP
 ############################################
 
 ml_cols = [c for c in detail_df.columns if "ml_candidate" in c]
@@ -53,7 +53,7 @@ plt.savefig(PLOT_FOLDER / "ml_candidate_heatmap.png", dpi=300)
 plt.close()
 
 ############################################
-# 2️⃣ METRIC SUCCESS RATE
+#  METRIC SUCCESS RATE
 ############################################
 
 plt.figure(figsize=(8,5))
@@ -79,7 +79,7 @@ plt.savefig(PLOT_FOLDER / "metric_success_rate.png", dpi=300)
 plt.close()
 
 ############################################
-# 3️⃣ VARIANCE DISTRIBUTION
+# VARIANCE DISTRIBUTION
 ############################################
 
 variance_cols = [c for c in detail_df.columns if "variance" in c]
@@ -103,7 +103,7 @@ plt.savefig(PLOT_FOLDER / "variance_distribution.png", dpi=300)
 plt.close()
 
 ############################################
-# 4️⃣ STATIONARITY COUNT
+# STATIONARITY COUNT
 ############################################
 
 stationary_cols = [c for c in detail_df.columns if "stationary" in c]

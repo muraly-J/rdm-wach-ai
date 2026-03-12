@@ -1,26 +1,37 @@
 import pandas as pd
-import numpy as np
 from pathlib import Path
 
 ############################################
-# CONFIG
+# PATHS
 ############################################
 
 PROJECT_ROOT = Path.cwd()
 
-DIVERSITY_PATH = PROJECT_ROOT / "data" / "meta" / "diversity_summary.csv"
-AHU_SUMMARY_PATH = PROJECT_ROOT / "data" / "meta" / "ahu_health_by_ahu.csv"
-STATIONARITY_PATH = PROJECT_ROOT / "data" / "meta" / "ahu_stationarity_analysis.csv"
+DIVERSITY_PATH = PROJECT_ROOT / "data/meta/diversity_summary.csv"
+AHU_SUMMARY_PATH = PROJECT_ROOT / "data/meta/ahu_health_by_ahu.csv"
+STATIONARITY_PATH = PROJECT_ROOT / "data/meta/ahu_stationarity_analysis.csv"
 
-OUTPUT_PATH = PROJECT_ROOT / "data" / "meta" / "go_no_go_assessment.csv"
+OUTPUT_PATH = PROJECT_ROOT / "data/meta/go_no_go_assessment.csv"
 
-# Thresholds
-MIN_ANOMALY_PERCENT = 5       # % of flagged hours for a component to be ML-feasible
-MIN_AHU_ML_PERCENT = 50       # % of AHUs valid for ML per metric
-MIN_VARIANCE = 0.001          # minimal variance to consider informative
+############################################
+# THRESHOLDS
+############################################
 
-# Components (score columns from your previous outputs)
-COMPONENTS = ["energy_score","pf_score","unbalance_score","thd_score","overload_score"]
+MIN_ANOMALY_PERCENT = 5
+MIN_AHU_AFFECTED_PERCENT = 20
+MIN_STATIONARY_PERCENT = 50
+
+############################################
+# COMPONENT CONFIG
+############################################
+
+COMPONENT_CONFIG = {
+    "energy_score": ("energy_%", "delta_kwh"),
+    "pf_score": ("pf_%", "power_factor_avg"),
+    "unbalance_score": ("unbalance_%", "current_unbalance"),
+    "thd_score": ("thd_%", "volts_l1_thd"),
+    "overload_score": ("overload_%", "power_total")
+}
 
 ############################################
 # LOAD DATA
@@ -33,60 +44,69 @@ stationarity_df = pd.read_csv(STATIONARITY_PATH)
 total_ahus = len(ahu_summary_df)
 
 ############################################
-# FUNCTION TO CALCULATE GO/NO-GO
+# ANALYSIS
 ############################################
 
-def compute_go_no_go(component):
-    # 1️⃣ Diversity info (global % unhealthy)
-    diversity_row = diversity_df[diversity_df["metric"]==component]
-    anomaly_percent = float(diversity_row["percentage"].values[0])
+results = []
 
-    # 2️⃣ % of AHUs valid for ML
-    ahu_col = component + "_flag" if component != "overload_score" else "overload_%"
-    
+for component, (ahu_col, metric) in COMPONENT_CONFIG.items():
+
+    station_col = f"{metric}_ml_candidate"
+
+    # anomaly %
+    anomaly_row = diversity_df[diversity_df["metric"] == component]
+
+    anomaly_percent = (
+        anomaly_row["percentage"].values[0]
+        if not anomaly_row.empty
+        else 0
+    )
+
+    # ahu affected %
     if ahu_col in ahu_summary_df.columns:
-        if ahu_col.endswith("_%"):
-            ahu_ml_percent = ahu_summary_df[ahu_col].mean()  # already in %
-        else:
-            ahu_ml_percent = 100 * ahu_summary_df[ahu_col].sum() / total_ahus
+        affected = (ahu_summary_df[ahu_col] > 1).sum()
+        ahu_percent = 100 * affected / total_ahus
     else:
-        ahu_ml_percent = 0
+        ahu_percent = 0
 
-    # 3️⃣ Stationarity & variance check (optional, use stationarity_df)
-    # Here, simple check: % of AHUs with stationary & variance >= MIN_VARIANCE
-    metric_stationary = component.replace("_score","")
-    if f"{metric_stationary}_ml_candidate" in stationarity_df.columns:
-        stationary_percent = 100 * stationarity_df[f"{metric_stationary}_ml_candidate"].sum() / total_ahus
+    # stationary %
+    if station_col in stationarity_df.columns:
+        stationary_percent = (
+            100 * stationarity_df[station_col].sum() /
+            len(stationarity_df)
+        )
     else:
         stationary_percent = 0
 
-    # 4️⃣ Make Go/No-Go decision
-    go = (anomaly_percent >= MIN_ANOMALY_PERCENT) and \
-         (ahu_ml_percent >= MIN_AHU_ML_PERCENT) and \
-         (stationary_percent >= MIN_AHU_ML_PERCENT)
+    # decision
+    decision = (
+        "GO"
+        if (
+            anomaly_percent >= MIN_ANOMALY_PERCENT
+            and ahu_percent >= MIN_AHU_AFFECTED_PERCENT
+            and stationary_percent >= MIN_STATIONARY_PERCENT
+        )
+        else "NO-GO"
+    )
 
-    decision = "GO" if go else "NO-GO"
-
-    return {
+    results.append({
         "component": component,
-        "anomaly_percent": round(anomaly_percent,2),
-        "ahu_ml_percent": round(ahu_ml_percent,2),
-        "stationary_percent": round(stationary_percent,2),
+        "anomaly_percent": round(anomaly_percent, 2),
+        "ahu_affected_percent": round(ahu_percent, 2),
+        "stationary_percent": round(stationary_percent, 2),
         "decision": decision
-    }
+    })
 
 ############################################
-# CREATE ASSESSMENT
+# SAVE CSV
 ############################################
 
-assessment_rows = [compute_go_no_go(c) for c in COMPONENTS]
+df = pd.DataFrame(results)
 
-assessment_df = pd.DataFrame(assessment_rows)
-
-# Save
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-assessment_df.to_csv(OUTPUT_PATH, index=False)
+df.to_csv(OUTPUT_PATH, index=False)
 
-print("Go/No-Go ML assessment completed!")
-print("Saved to:", OUTPUT_PATH)
-print("\nPreview:\n", assessment_df)
+print("\nGO / NO-GO ASSESSMENT\n")
+print(df)
+
+print("\nSaved to:", OUTPUT_PATH)

@@ -1,0 +1,6 @@
+component,anomaly_percent,ahu_affected_percent,stationary_percent,decision,AHUs_valid_for_ML,total_AHUs,percentage,anomaly_score,ahu_score,station_score,ml_readiness_score
+energy_score,49.77,99.35,83.77,GO,,,,0.49770000000000003,0.9934999999999999,0.8377,0.74844
+pf_score,28.66,99.35,4.55,NO-GO,,,,0.2866,0.9934999999999999,0.0455,0.42634
+unbalance_score,30.43,99.35,11.04,NO-GO,,,,0.3043,0.9934999999999999,0.1104,0.45288999999999996
+thd_score,29.68,100.0,38.96,NO-GO,,,,0.2968,1.0,0.3896,0.5356
+overload_score,6.5,73.38,10.39,NO-GO,,,,0.065,0.7338,0.1039,0.27731
