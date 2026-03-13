@@ -206,4 +206,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-data/merged/
+/data/merged/
+/data/merged/ahu_all.parquet
+/data/meta/ahu_health_scores.parquet
